@@ -7,7 +7,7 @@ const NewExpense = (props) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString(),
+      id: 'e' + Math.random().toString(36).slice(2),
     };
     props.onAddExpense(expenseData);
   };
