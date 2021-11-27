@@ -1,8 +1,9 @@
 import './App.css';
-import Expenses from './components/expenses/Expenses';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
-  const expenses = [
+  const items = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -30,8 +31,8 @@ function App() {
   ];
   return (
     <div>
-      <h1>Expense Tracker</h1>
-      <Expenses expenses={expenses} />
+      <NewExpense />
+      <Expenses expenses={items} />
     </div>
   );
 }
